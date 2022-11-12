@@ -21,3 +21,12 @@
     background-color: black;
     padding: 5px 10px;
 }
+.item-d-desc{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    width: 50%;
+}
+.desc-tit{
+    font-weight: 800;
+}

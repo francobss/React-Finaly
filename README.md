@@ -10,8 +10,9 @@ El tema de la pagina es sobre ventas de zapatillas importadas.
 ▸Firebase 
 
 ## Intalacion:
- ▸Instalar Git y NodeJS por npm (Versiones 2.38.0 y 18.12.1)
- ▸ Iniciar con  `npm start`
+▸Instalar Git y NodeJS por npm (Versiones 2.38.0 y 18.12.1)
+
+▸ Iniciar con  `npm start`
 ## Dependencias:
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

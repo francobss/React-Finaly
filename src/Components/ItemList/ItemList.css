@@ -1,0 +1,18 @@
+.item-list{
+    /* background-color: #243746; */
+    height: auto;
+    margin: 0 10px;
+    background-color: aliceblue;
+    
+}
+.item-list__components{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow:auto;
+    
+}
+.item-list__title{
+    background-color: aqua;
+}

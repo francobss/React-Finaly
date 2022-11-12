@@ -1,0 +1,75 @@
+
+.Card_container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    /* align-items: center; */
+}
+
+.Card_item{
+    width:80%;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+}
+.Card_img{
+    width: 20%;
+    height: 50%;
+    margin: 10px;
+}
+.Card_title{
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Card_p{
+    font-weight:900;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.Card_pricetotal_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Card_pricetotal{
+    background-image: linear-gradient(to top, #00c6fb 0%, rgb(68, 95, 247) 100%);
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    color:#000000
+}
+.cart-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+.cart-form__buttom{
+    border-radius: 2px;
+    background-color: #005bea;
+    margin: 5px;
+    width: 30%;
+    font-weight: 900;
+    color:#000000
+}
+.carrito-vacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 100px;
+}
+.carrito-vacio_p{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

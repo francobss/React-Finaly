@@ -1,0 +1,7 @@
+.item-list-container{
+    background-color: rgb(163, 163, 163);
+    margin: 0 10px;
+}
+.item-list-container__title{
+    background-color: rgb(110, 110, 110);
+}

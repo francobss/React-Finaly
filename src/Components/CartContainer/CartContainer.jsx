@@ -13,7 +13,6 @@ export const CartContainer = () =>{
     const value = useContext(CartContext)
     const {productosCarrito, getTotalPrice, getTotalProd, removeItem, finallyOrder} = value
     const [compraId, setCompraId] = useState("")
-    // const {getTotalProd} = useContext(CartContext)
     const sendOrder = (evt) => {
         evt.preventDefault()
         const compra = {
@@ -60,7 +59,6 @@ export const CartContainer = () =>{
                 <div className="Card_container">
                     <div>
                         {
-                            // abrimos llaves para codigo jv sc
                             productosCarrito.map((producto) => (
                                 <div className="Card_item">
                                     <img src={producto.pictureUrl} alt={producto.title} className="Card_img"></img>
@@ -83,7 +81,6 @@ export const CartContainer = () =>{
                         <input type="email" name="email" placeholder="correo"></input>
                         <button type="submit" className="cart-form__buttom">Enviar orden.</button>
                     </form>
-                    {/* <button onClick={uptadeProd}>actualizar producto.</button> */}
                 </div>
                 <div className="Card_pricetotal_cont">
                     <p className="Card_pricetotal">Total de productos: {getTotalProd()}</p>

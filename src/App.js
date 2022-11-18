@@ -4,8 +4,6 @@ import {ItemListContainer} from "./Components/ItemListContainer/ItemListContaine
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Contact} from './Components/Contact/Contact'
 import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer';
-import {EventoDefault} from './Components/EventosDefault/EventosDefault'
-// import {PaginaContexto} from './Components/Temas/PaginaContext/PaginaContexto'
 import {CartProvider} from './context/CartContext'
 import {CartContainer} from './Components/CartContainer/CartContainer'
 

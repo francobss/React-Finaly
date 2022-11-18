@@ -10,9 +10,6 @@ import './ItemListContainer.css'
 
 export const ItemListContainer = () => {
     
-    
-
-    // console.log(useParams()); // {categoryName:""}
     const {categoryId} = useParams();
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true)
@@ -24,7 +21,6 @@ export const ItemListContainer = () => {
             const queryRef = collection(dataBase, 'products')
             // todos los documentos de la coleccion products/
             const response = await getDocs(queryRef)
-            console.log(response)
             // accedemos a dosc donde estan los arreglos
             const documents = response.docs
             const results = documents.map(element => {
@@ -33,7 +29,6 @@ export const ItemListContainer = () => {
                     id:element.id
                 })
             })
-            console.log(results)
             if(categoryId){
                 //filtramos por categoria
                 const filteredProduct = results.filter(elm=>elm.category[0] === categoryId);
@@ -42,7 +37,6 @@ export const ItemListContainer = () => {
                 //sino hay la categoria, mostrar todos los productos
                 setProductos(results)
             }
-            
         }
         setTimeout(() => {
             setLoading(false)

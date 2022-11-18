@@ -26,7 +26,6 @@ li {
     justify-content: space-between;
 }
 .navbar-list{
-    margin: 0 10px;
     padding: 10px;
     margin: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -38,8 +37,8 @@ li {
     position: absolute;
     display: flex;
     flex-direction: column;
-    color: black;
-    background-color: aqua;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     padding: 10px;
 }
 .navbar-list__text{
@@ -52,4 +51,21 @@ li {
     height: 5%;
     align-items: center;
     margin-top: 2%;
+}
+.link-p{
+    color: black;
+    padding: 10px;
+    background-color:  rgb(255, 255, 255);
+}
+.activelink-p{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.link{
+    color: rgb(255, 255, 255);
+}
+.activelink{
+    color: rgb(25, 0, 255);
+    font-weight: bold;
 }

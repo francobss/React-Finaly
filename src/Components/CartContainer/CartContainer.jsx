@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
+import { Link } from "react-router-dom"
 import './CartContainer.css'
 // base de datos Firebase
 import { dataBase } from "../../Utils/firebase"
@@ -46,6 +47,9 @@ export const CartContainer = () =>{
                     <div className="carrito-vacio">
                         <img src={cart2} alt="" />
                         <p className="carrito-vacio_p">sin productos en el carrito</p>
+                        <Link to="/">
+                            <button>Ir al listado de productos.</button>
+                        </Link>
                     </div>
                 </div>
             )

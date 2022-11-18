@@ -1,28 +1,3 @@
-// import React, { useState } from "react";
-
-
-// export const CartContext = React.createContext();
-
-// export const CustomProvider = ({children}) => {
-
-//     const [productosCarrito, setProductosCarrito] = useState([])
-
-//     const agProd = (nuevoProd) => {
-//         const nuevosProductos = [...productosCarrito]
-//         nuevosProductos.push(nuevoProd)
-//         setProductosCarrito(nuevosProductos)
-//         console.log('nuevos pord', nuevosProductos)
-//     }
-
-//     console.log("productosCarrito", productosCarrito)
-
-//     return(
-//         <CartContext.Provider value={{nombre:"fredy", productosCarrito, agProd}}>
-//             {children}
-//         </CartContext.Provider>
-//     )
-// }
-
 import { createContext, useState} from 'react'
 
 export const CartContext = createContext()
@@ -54,7 +29,6 @@ export const CartProvider = ({children}) =>{
                 cantidad:cantidad, 
                 cantidadPrecio: cantidad * item.price,
             }
-            // console.log('new prod', newProduct)
             productosCarritosCopy.push(newProduct)
             setProductosCarrito(productosCarritosCopy)
         }

@@ -21,18 +21,11 @@ export const Contact = () => {
             tel:evt.target.tel.value,
             msj:evt.target.msj.value,
         }]
-        console.log(form)
     }
 
     
     return(
         <div className="contact-page">
-            {/* {
-                isMobile === true ?
-                <p>soy un elemento de mobile</p>
-                :
-                <p> soy una laptop</p>
-            } */}
             <div className="conteiner-form">
                 <h1>Contacto</h1>
                 <form onSubmit={sendContact} className="form">

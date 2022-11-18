@@ -1,4 +1,6 @@
 import { createContext, useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext = createContext()
 
@@ -21,8 +23,18 @@ export const CartProvider = ({children}) =>{
             //logica si existe
             const posPord = productosCarritosCopy.findIndex((elemnt) => elemnt.id === item.id )
             productosCarritosCopy[posPord].cantidad = productosCarritosCopy[posPord].cantidad += cantidad
-            productosCarritosCopy[posPord].cantidadPrecio = productosCarritosCopy[posPord].cantidad * productosCarritosCopy[posPord].price 
+            productosCarritosCopy[posPord].cantidadPrecio = productosCarritosCopy[posPord].cantidad * productosCarritosCopy[posPord].price
             setProductosCarrito(productosCarritosCopy)
+            toast.success('Agregado al carrito', {
+                position:"bottom-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
         }else{
             // logica si no existe
             const newProduct = {...item, 
@@ -57,6 +69,7 @@ export const CartProvider = ({children}) =>{
     return(
         <CartContext.Provider value={{productosCarrito, addProdu, getTotalPrice, getTotalProd, removeItem, finallyOrder}}>
             {children}
+            <ToastContainer/>
         </CartContext.Provider>
     )
 }

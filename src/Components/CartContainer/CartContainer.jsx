@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
 import './CartContainer.css'
+import swal from 'sweetalert';
 // base de datos Firebase
 import { dataBase } from "../../Utils/firebase"
 import { collection, addDoc} from "firebase/firestore"
@@ -27,20 +28,19 @@ export const CartContainer = () =>{
         const queryRef = collection(dataBase, 'orders');
         // agregar informacion a la firebase
         addDoc(queryRef, compra).then((result) => {
-            console.log(result.id)
             setCompraId(result.id)
             finallyOrder()
+            swal({
+                title:"Compra realizada",
+                text: `ID compra: ${result.id}`,
+                icon: "success",
+                button: "Aceptar",
+            })
         })
     }
     // condicion si el carrito no tiene nada.
     if(getTotalProd() === 0){
         if(compraId){
-            return(
-                <div>
-                    <p>Compra realizada con exito, identificador de compra: {compraId}</p>
-                </div>
-            )
-        }else{
             return(
                 <div >
                     <div className="carrito-vacio">
@@ -89,5 +89,4 @@ export const CartContainer = () =>{
             </div>
         )
     }
-    
 }
